@@ -28,7 +28,14 @@ interface DashboardSidebarProps {
   className?: string;
 }
 
-const navigationItems = [
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<any>;
+  badge?: string;
+}
+
+const navigationItems: NavigationItem[] = [
   { name: "Dashboard", href: "/dashboard", icon: Home },
   {
     name: "Transactions",
